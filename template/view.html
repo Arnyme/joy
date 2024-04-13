@@ -1,0 +1,257 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>tayco | home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="" {% static 'css/all.min.css' %} rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href={% static 'lib/animate/animate.min.css' %} rel="stylesheet">
+    <link href={% static 'lib/owlcarousel/assets/owl.carousel.min.css' %} rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href={% static 'css/bootstrap.min.css' %} rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href={% static 'css/style.css' %} rel="stylesheet">
+</head>
+
+<body>
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+
+        <a href={% url 'home' %} class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src={% static 'img/logo.png' %} alt="" srcset="" class="py-4"
+                style="width: 100px; padding-bottom: 30px;">
+            <h2 class="m-0 text-primary">Tayco</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="{% url 'home' %}"  class="nav-item nav-link active">Home</a>
+            
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">account</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="" class="dropdown-item " data-toggle="modal" data-target="#exampleModal">Register</a>
+                        <a href="" class="dropdown-item" data-toggle="modal" data-target="#exampleModalLong">login</a>
+                        <a href="/admin" class="dropdown-item">staff</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Button trigger modal -->
+
+    <div >
+        <div class="my-2 mx-5 ">
+            <a href="{% url 'home' %}" ><i class="bi bi-arrow-left"></i> Home</a>
+        </div>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content col-12">
+           
+            <div class="modal-body">
+                <strong class="text-center"> TANZANIA YOUTH CENTRE ORGANIZATION (TAYCO)</strong> <br>
+                 <br><br>
+                 <div >
+                    <div class="" role="document">
+                      <div class="">
+                        
+                        <div class="modal-body col-12">
+                          <div class="border-bottom pb-4">
+                            <img src="{{ project.gt_image }} " alt="" srcset="" style="width: 25rem;">
+                          </div>
+                          <h1>{{project.project_name}}</h1>
+                          <div class="mt-1 py-3">
+                            {{project.desription}}
+                          </div>
+                          <div class="post-meta">
+                            <i class="bi bi-calendar"></i>
+                            {{ project.created_at | date:'Y M d' }}
+                        </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+            
+        </div>
+    </div>
+</div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="#">Privacy Policy</a>
+                    <a class="btn btn-link" href="#">Terms & Condition</a>
+                    <a class="btn btn-link" href="#">FAQs & Help</a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Dar es salaam</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+255 622 475 911</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@tayco.co.tz</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>P. O . BOX 20217</p>
+
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src={% static "img/slide1.jpeg" %} alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src={% static "img/slide2.jpeg" %} alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src={% static "img/slide3.jpeg" %} alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src={% static "img/sc.jpg" %} alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src={% static "img/slide1.jpeg" %} alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src={% static "img/slide2.jpeg" %} alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">tayco</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <script>
+
+        var password = document.querySelector('#pass');
+        var passFeed = document.querySelector('#passFeed');
+        pass.addEventListener('keyup', function (e) {
+            passValue = e.target.value
+            if (passValue.length > 0) {
+
+                fetch('/authentification/password', {
+                    method: 'POST',
+                    body: JSON.stringify({ pass: passValue })
+
+                }).then(res => {
+                    return res.json()
+                }).then(data => {
+
+                    if (data.password_isValid) {
+
+
+                        passFeed.classList.add('valid-feedback')
+                        password.classList.add('is-valid')
+                        passFeed.innerHTML = `valid`
+                        regbtn.disabled = false
+
+                    }
+                    if (data.password_err) {
+                        password.classList.add('is-invalid')
+                        passFeed.innerHTML = data.password_err
+                        passFeed.classList.add('invalid-feedback')
+                        regbtn.disabled = true
+                    }
+
+                })
+            }
+            password.classList.remove('is-invalid')
+            passFeed.classList.remove('valid-feedback')
+            password.classList.remove('is-valid')
+            passFeed.classList.remove('invalid-feedback')
+            regbtn.disabled = false
+            passFeed.innerHTML = ''
+        })
+
+    </script>
+    <!-- JavaScript Libraries -->
+    <script src="{% static 'js/formValidation.js' %}"></script>
+    <script src={% static 'js/jquery.js' %}></script>
+    <script src={% static 'js/bootstrap.bundle.min.js' %}></script>
+    <script src={% static 'lib/wow/wow.min.js' %}></script>
+    <script src={% static 'lib/easing/easing.min.js' %}></script>
+    <script src={% static 'lib/waypoints/waypoints.min.js' %}></script>
+    <script src={% static 'lib/owlcarousel/owl.carousel.min.js' %}></script>
+    <script src={% static 'js/main.js' %}></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <script defer=""
+        src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317"
+        integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
+        data-cf-beacon="{&quot;rayId&quot;:&quot;86df2759feaa7939&quot;,&quot;version&quot;:&quot;2024.3.0&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;}"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
